@@ -1,0 +1,43 @@
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.large-heading {
+  font-size: 74px;
+}
+
+.medium-heading {
+  font-size: 54px;
+}
+
+.divider {
+  color: #5f6551;
+}
+
+.see-more {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 24px;
+  padding: 0 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.see-more:hover {
+  opacity: 0.7;
+}
+
+header ul.navbar-nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=style.css.map */
