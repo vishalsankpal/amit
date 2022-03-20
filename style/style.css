@@ -9,12 +9,30 @@ body {
   font-size: 74px;
 }
 
-.medium-heading {
-  font-size: 54px;
+.medium-heading, .banner-section .banner-heading, .odio-section .odio-section-heading, .dolors-sections .dolors-sections-heading, .amet-section .amet-section-heading, .corporis-section .corporis-section-heading {
+  font-size: 55px;
 }
 
 .divider {
-  color: #5f6551;
+  background: #5f6551;
+  height: 2px;
+  width: 100%;
+}
+
+.section-medium-title, .banner-section .banner-subheading, .saepe-section .hic-grid-container .hic-grid-heading, .saepe-section .hic-grid-container .info .author, .saepe-section .hic-grid-container .info .date, .odio-section .odio-section-subheading, .dolors-sections .dolors-grid-heading, .amet-section .amet-section-subheading, .corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content .inner-container .corporis-grid-heading {
+  font-size: 28px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+.section-large-title, .incident-section .incident-section-heading, .exercitation-section .exercitation-section-right-grid .exercitation-section-heading {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  font-size: 70px;
 }
 
 .see-more {
@@ -32,12 +50,794 @@ body {
   opacity: 0.7;
 }
 
-header ul.navbar-nav {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+header .logo {
+  max-width: 216px;
+  margin-right: 36px;
+}
+
+@media only screen and (max-width: 374px) {
+  header .logo {
+    max-width: 200px;
+    margin-right: 0;
+  }
+}
+
+header ul li {
+  margin-right: 50px;
+}
+
+header ul li a {
+  font-family: 'Nunito';
+  font-weight: 300;
+  color: #050505;
+}
+
+header ul li a.active {
+  font-weight: 700;
+  border-bottom: 2px solid #050505;
+}
+
+header form {
+  position: relative;
+}
+
+header form input[type="search"] {
+  border-radius: 24px;
+  border: none;
+  -webkit-box-shadow: inset 0px 2px 4px #868585;
+          box-shadow: inset 0px 2px 4px #868585;
+}
+
+header form button.btn-search {
+  border: none;
+  right: 0.5rem;
+  top: 1px;
+  position: absolute;
+}
+
+header form button.btn-search:focus + .btn, header form button.btn-search:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.banner-section {
+  height: 100vh;
+}
+
+.banner-section .banner-text-wrapper {
+  padding-top: 115px;
+}
+
+.banner-section .banner-text-container {
+  max-width: 50%;
+}
+
+.banner-section .banner-heading {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.banner-section .banner-subheading {
+  color: #040404;
+  margin-bottom: 0;
+}
+
+.saepe-section {
+  background-color: #fbfbf5;
+  padding: 78px 0;
+}
+
+.saepe-section .saepe-section-heading {
+  font-size: 42px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #070707;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  max-width: 38%;
+  position: relative;
+  line-height: 1.2;
+}
+
+.saepe-section .saepe-section-heading::after {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 8px;
+  background-color: #070707;
+  bottom: -15px;
+  left: 0;
+}
+
+.saepe-section .custom-container {
+  width: 95%;
+  margin: 55px auto 0;
+}
+
+.saepe-section .hic-grid-container {
+  -webkit-box-shadow: 0px 5px 9px #cfcfcf;
+          box-shadow: 0px 5px 9px #cfcfcf;
+  padding: 50px;
+  width: 97%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.saepe-section .hic-grid-container .hic-grid-heading {
+  color: #32455f;
+}
+
+.saepe-section .hic-grid-container ul.dashed {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.saepe-section .hic-grid-container ul.dashed li {
+  text-indent: -5px;
+  color: #32455f;
+  font-size: 16px;
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  word-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.saepe-section .hic-grid-container ul.dashed li:before {
+  content: "-";
+  text-indent: -5px;
+  margin-right: 10px;
+}
+
+.saepe-section .hic-grid-container .divider {
+  margin: 30px 0;
+}
+
+.saepe-section .hic-grid-container .info .author, .saepe-section .hic-grid-container .info .date {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #32455f;
+  margin-bottom: 0;
+}
+
+.saepe-section .hic-grid-container .info .date {
+  margin-bottom: 5px;
+}
+
+.saepe-section .hic-grid-container .info .time {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #32455f;
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+.saepe-section .hic-grid-container .info .dots-number-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.saepe-section .hic-grid-container .info .dots-number-wrapper span {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #32455f;
+}
+
+.saepe-section .hic-grid-container .info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 22px;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.saepe-section .hic-grid-container .info ul li {
+  color: #32455f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.saepe-section .hic-grid-container .info ul li.non-active {
+  list-style-type: circle;
+}
+
+.incident-section {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(65, 128, 150, 0.75)), to(rgba(65, 128, 150, 0.75))), url("../images/boyCandid.jpg");
+  background: linear-gradient(rgba(65, 128, 150, 0.75), rgba(65, 128, 150, 0.75)), url("../images/boyCandid.jpg");
+  padding: 100px 0;
+}
+
+.incident-section .incident-section-heading {
+  color: #fff;
+  line-height: 1.1;
+  word-spacing: 10px;
+}
+
+.incident-section .incident-section-information,
+.incident-section .incident-section-date {
+  font-size: 35px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.incident-section .incident-section-date::after {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 80px;
+  background-color: #fff;
+  bottom: -22px;
+  right: 0;
+}
+
+.incident-section .see-more {
+  margin-top: 45px;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  padding: 7px 31px;
+  line-height: normal;
+  color: #32455f;
+}
+
+.incident-section .incident-section-right-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.odio-section {
+  padding: 133px 0 180px;
+  background-position: 0 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.odio-section .odio-section-heading {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1.2;
+  color: #030303;
+  word-spacing: 100vw;
+}
+
+.odio-section .odio-section-information {
+  font-family: 'Bitter', serif;
+  font-size: 18px;
+  color: #050505;
+  font-weight: 400;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.odio-section .odio-small-info {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #32455f;
+  letter-spacing: 2px;
+  font-size: 20px;
+  word-spacing: 3px;
+  margin-top: 24px;
+}
+
+.odio-section .date-time .date, .odio-section .date-time .time {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #32455f;
+}
+
+.odio-section .date-time .date {
+  font-size: 25px;
+  margin-bottom: 4px;
+}
+
+.odio-section .date-time .time {
+  font-size: 20px;
+}
+
+.odio-section .price {
+  margin-left: 40px;
+}
+
+.odio-section .price p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  line-height: normal;
+  color: #32455f;
+  letter-spacing: 2px;
+  font-size: 20px;
+  word-spacing: 3px;
+  margin-bottom: 0;
+}
+
+.exercitation-section {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(65, 128, 150, 0.75)), to(rgba(65, 128, 150, 0.75))), url("../images/binacularGirl.jpg");
+  background: linear-gradient(rgba(65, 128, 150, 0.75), rgba(65, 128, 150, 0.75)), url("../images/binacularGirl.jpg");
+  padding: 100px 0;
+}
+
+.exercitation-section .exercitation-section-left-grid {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.exercitation-section .exercitation-section-left-grid .exercitation-section-date::after {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 80px;
+  background-color: #fff;
+  bottom: -22px;
+  left: 0;
+}
+
+.exercitation-section .exercitation-section-left-grid .see-more {
+  margin-top: 45px;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  padding: 7px 31px;
+  line-height: normal;
+  color: #32455f;
+}
+
+.exercitation-section .exercitation-section-right-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.exercitation-section .exercitation-section-right-grid .exercitation-section-heading {
+  color: #fff;
+  line-height: 1.1;
+  word-spacing: 10px;
+  text-align: right;
+}
+
+.exercitation-section .exercitation-section-information,
+.exercitation-section .exercitation-section-date {
+  font-size: 35px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.dolors-sections {
+  padding: 100px 0;
+  background-color: #fbfbf5;
+}
+
+.dolors-sections .dolors-sections-heading {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: #050505;
+  white-space: pre-line;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.dolors-sections .dolors-sections-heading::after {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 8px;
+  background-color: #070707;
+  bottom: -15px;
+  left: 0;
+}
+
+.dolors-sections .dolors-sections-grid {
+  padding: 0 30px;
+}
+
+.dolors-sections .dolors-grid-img-wrapper {
+  text-align: center;
+}
+
+.dolors-sections .dolors-grid-heading {
+  font-size: 30px;
+  color: #010101;
+}
+
+.dolors-sections .dolors-grid-information {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #010101;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 0;
+}
+
+.dolors-sections .see-more-contaier {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.dolors-sections .see-more-contaier .see-more {
+  background-color: #075a76;
+  color: #fff;
+  padding: 6px 28px;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+.dolors-sections .divider {
+  margin-top: 90px;
+}
+
+.amet-section {
+  padding: 133px 0 180px;
+  background-position: 0 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.amet-section .amet-section-heading {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1.2;
+  color: #030303;
+  word-spacing: 100vw;
+}
+
+.amet-section .amet-section-information {
+  font-family: 'Bitter', serif;
+  font-size: 18px;
+  color: #050505;
+  font-weight: 400;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.amet-section .amet-small-info {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #32455f;
+  letter-spacing: 2px;
+  font-size: 20px;
+  word-spacing: 3px;
+  margin-top: 24px;
+}
+
+.amet-section .date-time .date, .amet-section .date-time .time {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #32455f;
+}
+
+.amet-section .date-time .date {
+  font-size: 25px;
+  margin-bottom: 4px;
+}
+
+.amet-section .date-time .time {
+  font-size: 20px;
+}
+
+.amet-section .price {
+  margin-left: 40px;
+}
+
+.amet-section .price p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  line-height: normal;
+  color: #32455f;
+  letter-spacing: 2px;
+  font-size: 20px;
+  word-spacing: 3px;
+  margin-bottom: 0;
+}
+
+.corporis-section {
+  padding: 105px 0;
+  background-color: #fbfbf5;
+}
+
+.corporis-section .corporis-section-heading {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: #050505;
+  white-space: pre-line;
+}
+
+.corporis-section .custom-grid-container {
+  max-width: 85%;
+  margin: 50px auto 0;
+}
+
+.corporis-section .custom-grid-container .corporis-grid-wrapper {
+  padding: 0 20px;
+}
+
+.corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-img-wrapper img {
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+}
+
+.corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content ul li {
+  height: 7px;
+  color: #80788c;
+}
+
+.corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content .inner-container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content .inner-container .corporis-grid-heading {
+  font-size: 30px;
+  color: #010101;
+}
+
+.corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content .inner-container .corporis-grid-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #010101;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content .inner-container .divider {
+  margin-bottom: 1rem;
+}
+
+.corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content .inner-container .location {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  line-height: normal;
+  color: #32455f;
+  letter-spacing: 2px;
+  font-size: 20px;
+  word-spacing: 3px;
+  margin-bottom: 0;
+}
+
+.corporis-section .custom-grid-container .see-more-container {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.corporis-section .custom-grid-container .see-more-container .see-more {
+  background-color: #075a76;
+  color: #fff;
+  padding: 6px 28px;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+.vero-section {
+  padding: 115px 0;
+}
+
+.vero-section .vero-section-heading {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #fbfbf5;
+  font-size: 47px;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  position: relative;
+}
+
+.vero-section .vero-section-heading::after {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 8px;
+  background-color: #fbfbf5;
+  bottom: -15px;
+  left: 0;
+}
+
+.vero-section .vero-date {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #fbfbf5;
+  font-size: 55px;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  margin-top: 45px;
+}
+
+.vero-section .off {
+  font-size: 100px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #fbfbf5;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  line-height: .9;
+}
+
+.vero-section .off-text {
+  font-size: 35px;
+}
+
+.vero-section .vero-info {
+  font-size: 28px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #fbfbf5;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  line-height: normal;
+}
+
+.vero-section .vero-off-date {
+  font-size: 20px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #fbfbf5;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+}
+
+.alique-section {
+  padding: 120px 0 90px;
+  background-position: center;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(65, 128, 150, 0.75)), to(rgba(65, 128, 150, 0.75))), url("../images/mountains.jpg");
+  background: linear-gradient(rgba(65, 128, 150, 0.75), rgba(65, 128, 150, 0.75)), url("../images/mountains.jpg");
+}
+
+.alique-section .col-lg-8 {
+  margin: 0 auto;
+}
+
+.alique-section .alique-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.alique-section .alique-section-text {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #fbfbf5;
+  font-size: 36px;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  padding: 0 70px 50px;
+}
+
+.alique-section .img-container {
+  margin-bottom: 35px;
+}
+
+.alique-section .see-more {
+  background-color: #fff;
+  padding: 6px 28px;
+  line-height: normal;
+  letter-spacing: 2px;
+  color: #5f6551;
+}
+
+.footer {
+  padding: 100px 0 85px;
+  background-color: #fbfbf5;
+}
+
+.footer .footer-section-heading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #5f6551;
+}
+
+.footer .footer-logo {
+  margin-top: 40px;
+}
+
+.footer .footer-section-subheading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #5f6551;
+  margin-bottom: 25px;
+}
+
+.footer .footer-small-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #5f6551;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer ul li a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #5f6551;
+  word-spacing: 3px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer ul li a:hover {
+  font-weight: 700;
+}
+
+.empty-section {
+  background-color: #5f6551;
+  height: 20px;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
