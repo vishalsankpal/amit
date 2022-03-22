@@ -112,6 +112,12 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   max-width: 50%;
 }
 
+@media only screen and (max-width: 991px) {
+  .banner-section .banner-text-container {
+    max-width: 49%;
+  }
+}
+
 .banner-section .banner-heading {
   font-family: 'Bebas Neue', cursive;
   font-weight: 400;
@@ -151,6 +157,12 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   left: 0;
 }
 
+@media only screen and (max-width: 991px) {
+  .saepe-section .saepe-section-heading {
+    max-width: 54%;
+  }
+}
+
 .saepe-section .custom-container {
   width: 95%;
   margin: 55px auto 0;
@@ -163,6 +175,13 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   width: 97%;
   margin: 0 auto;
   border-radius: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+  .saepe-section .hic-grid-container {
+    padding: 50px 15px;
+    width: 100%;
+  }
 }
 
 .saepe-section .hic-grid-container .hic-grid-heading {
@@ -200,6 +219,11 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   font-weight: 400;
   color: #32455f;
   margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .saepe-section .hic-grid-container .info .date {
@@ -249,6 +273,13 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(65, 128, 150, 0.75)), to(rgba(65, 128, 150, 0.75))), url("../images/boyCandid.jpg");
   background: linear-gradient(rgba(65, 128, 150, 0.75), rgba(65, 128, 150, 0.75)), url("../images/boyCandid.jpg");
   padding: 100px 0;
+  background-size: cover !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .incident-section {
+    background-position: -230% 100% !important;
+  }
 }
 
 .incident-section .incident-section-heading {
@@ -307,6 +338,12 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   background-position: 0 100%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 991px) {
+  .odio-section {
+    background-position: 50% 100%;
+  }
 }
 
 .odio-section .odio-section-heading {
@@ -432,6 +469,12 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   position: relative;
 }
 
+@media only screen and (max-width: 991px) {
+  .exercitation-section .exercitation-section-information {
+    text-align: right;
+  }
+}
+
 .dolors-sections {
   padding: 100px 0;
   background-color: #fbfbf5;
@@ -461,6 +504,12 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   padding: 0 30px;
 }
 
+@media only screen and (max-width: 991px) {
+  .dolors-sections .dolors-sections-grid {
+    padding: 0;
+  }
+}
+
 .dolors-sections .dolors-grid-img-wrapper {
   text-align: center;
 }
@@ -468,6 +517,11 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
 .dolors-sections .dolors-grid-heading {
   font-size: 30px;
   color: #010101;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .dolors-sections .dolors-grid-information {
@@ -587,14 +641,33 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   margin: 50px auto 0;
 }
 
+@media only screen and (max-width: 991px) {
+  .corporis-section .custom-grid-container {
+    max-width: 100%;
+  }
+}
+
 .corporis-section .custom-grid-container .corporis-grid-wrapper {
   padding: 0 20px;
+}
+
+@media only screen and (max-width: 991px) {
+  .corporis-section .custom-grid-container .corporis-grid-wrapper {
+    padding: 0;
+  }
 }
 
 .corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-img-wrapper img {
   height: 260px;
   width: 260px;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 1199px) {
+  .corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-img-wrapper img {
+    height: 200px;
+    width: 200px;
+  }
 }
 
 .corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content ul {
@@ -620,6 +693,11 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
 .corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content .inner-container .corporis-grid-heading {
   font-size: 30px;
   color: #010101;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content .inner-container .corporis-grid-description {
@@ -649,6 +727,11 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   font-size: 20px;
   word-spacing: 3px;
   margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .corporis-section .custom-grid-container .see-more-container {
@@ -733,11 +816,17 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
 
 .alique-section {
   padding: 120px 0 90px;
-  background-position: center;
-  background-size: cover !important;
   background-repeat: no-repeat;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(65, 128, 150, 0.75)), to(rgba(65, 128, 150, 0.75))), url("../images/mountains.jpg");
   background: linear-gradient(rgba(65, 128, 150, 0.75), rgba(65, 128, 150, 0.75)), url("../images/mountains.jpg");
+  background-size: cover !important;
+  background-position: center;
+}
+
+@media only screen and (max-width: 991px) {
+  .alique-section {
+    background-position: -142% 100%;
+  }
 }
 
 .alique-section .col-lg-8 {
