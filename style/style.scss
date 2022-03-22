@@ -99,6 +99,9 @@ header{
     }
     .banner-text-container{
         max-width: 50%;
+        @media only screen and (max-width:991px){
+            max-width: 49%;
+        }
     }
     .banner-heading{
         @extend .medium-heading;
@@ -137,6 +140,9 @@ header{
             bottom: -15px;
             left: 0;
         }
+        @media only screen and (max-width:991px){
+            max-width: 54%;
+        }
     }
     .custom-container{
         width: 95%;
@@ -148,6 +154,10 @@ header{
         width: 97%;
         margin: 0 auto;
         border-radius: 10px;
+        @media only screen and (max-width:991px){
+            padding: 50px 15px;
+            width: 100%;
+        }
         .hic-grid-heading{
             @extend .section-medium-title;
             color: #32455f;
@@ -182,6 +192,11 @@ header{
                 @extend .section-medium-title;
                 color: #32455f;
                 margin-bottom: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
             }
             .date{
                 margin-bottom: 5px;
@@ -223,6 +238,10 @@ header{
 .incident-section{
     background: linear-gradient(rgba(65, 128, 150, 0.75), rgba(65, 128, 150, 0.75)),url('../images/boyCandid.jpg');
     padding: 100px 0;
+    background-size: cover !important;
+    @media only screen and(max-width:991px){
+        background-position: -230% 100% !important;
+    }
     .incident-section-heading{
         @extend .section-large-title;
         color: $white;
@@ -272,6 +291,9 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     // background-position-y:center;
+    @media only screen and (max-width:991px){
+        background-position: 50% 100%;
+    }
     .odio-section-heading{
         @extend .medium-heading;
         font-family: 'Bebas Neue', cursive;
@@ -381,6 +403,11 @@ header{
         letter-spacing: 3px;
         position: relative;
     }
+    .exercitation-section-information{
+        @media only screen and (max-width:991px){
+            text-align: right;
+        }
+    }
 }
 // exercitation-section end
 // dolors section start
@@ -408,6 +435,9 @@ header{
     }
     .dolors-sections-grid{
         padding: 0 30px;
+        @media only screen and (max-width:991px){
+            padding: 0;
+        }
     }
     .dolors-grid-img-wrapper{
         text-align: center;
@@ -416,6 +446,11 @@ header{
         @extend .section-medium-title;
         font-size: 30px;
         color: #010101;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
     }
     .dolors-grid-information{
         font-family: 'Raleway', sans-serif;
@@ -529,13 +564,23 @@ header{
     .custom-grid-container{
         max-width: 85%;
         margin: 50px auto 0;
+        @media only screen and (max-width:991px){
+            max-width: 100%;
+        }
         .corporis-grid-wrapper{
             padding: 0 20px;
+            @media only screen and (max-width:991px){
+                padding: 0;
+            }
             .corporis-img-wrapper{
                 img{
                     height: 260px;
                     width: 260px;
                     border-radius: 50%;
+                    @media only screen and (max-width:1199px){
+                        height: 200px;
+                        width: 200px;
+                    }
                 }
             }
             .corporis-grid-content{
@@ -554,6 +599,11 @@ header{
                         @extend .section-medium-title;
                         font-size: 30px;
                         color: #010101;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
                     }
                     .corporis-grid-description{
                         font-family: 'Raleway', sans-serif;
@@ -580,6 +630,11 @@ header{
                         font-size: 20px;
                         word-spacing: 3px;
                         margin-bottom: 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
                     }
                 }
             }
@@ -662,10 +717,13 @@ header{
 // alique-section start
 .alique-section{
     padding: 120px 0 90px;
-    background-position: center;
-    background-size: cover !important;
     background-repeat: no-repeat;
     background:linear-gradient(rgba(65, 128, 150, 0.75), rgba(65, 128, 150, 0.75)),url('../images/mountains.jpg') ;
+    background-size: cover !important;
+    background-position: center;
+    @media only screen and (max-width:991px){
+        background-position: -142% 100%;
+    }
     .col-lg-8{
         margin: 0 auto;
 
