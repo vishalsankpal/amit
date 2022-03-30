@@ -15,13 +15,32 @@ $black:#000;
 .large-heading{
     font-size: 74px;
 }
+.cross{
+    @media only screen and (max-width:575px){
+        display: none !important;
+    }
+}
 .medium-heading{
     font-size: 55px;
+    @media only screen and (max-width:375px){
+        font-size: 44px;
+    }
 }
 .divider{
     background: #5f6551;
     height: 2px;
     width: 100%;
+}
+.cross-section{
+    font-size: 35px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    color: $white;
+    letter-spacing: 3px;
+    position: relative;
+    @media only screen and (max-width:380px){
+        font-size: 30px;
+    }
 }
 .section-medium-title{
     font-size: 28px;
@@ -36,6 +55,12 @@ $black:#000;
     letter-spacing: 3px;
     line-height: 1.2;
     font-size: 70px;
+    @media only screen and (max-width:480px){
+        font-size: 56px;
+    }
+    @media only screen and (max-width:380px){
+        font-size: 42px;
+    }
 }
 .see-more{
     font-family: 'Raleway', sans-serif;
@@ -57,6 +82,16 @@ header{
         @media only screen and (max-width:374px){
             max-width: 200px;
             margin-right: 0;
+        }
+    }
+    @media only screen and (max-width:991px){
+        .navbar-collapse{
+            background: rgb(255, 255, 255);
+            padding: 10px;
+            z-index: 1;
+            .nav-link{
+                display: inline-block;
+            }
         }
     }
     ul{
@@ -102,6 +137,12 @@ header{
         @media only screen and (max-width:991px){
             max-width: 49%;
         }
+        @media only screen and (max-width:480px){
+            max-width: 68%;
+        }
+        @media only screen and (max-width:360px){
+            max-width: 80%;
+        }
     }
     .banner-heading{
         @extend .medium-heading;
@@ -109,11 +150,25 @@ header{
         font-weight: 400;
         line-height: 1;
         margin-bottom: 15px;
+        
     }
     .banner-subheading{
         @extend .section-medium-title;
         color: #040404;
         margin-bottom: 0;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url('../images/Shape.png');
+            height: 26px;
+            width: 26px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: -12px;
+            bottom: -5px;
+        }
     }
 }
 // banner section end
@@ -143,10 +198,27 @@ header{
         @media only screen and (max-width:991px){
             max-width: 54%;
         }
+        @media only screen and (max-width:767px){
+            max-width: 73%;
+        }
+        @media only screen and (max-width:480px){
+            max-width: 80%;
+            font-size: 36px;
+        }
+        @media only screen and (max-width:480px){
+            max-width: 100%;
+            font-size: 36px;
+        }
     }
     .custom-container{
         width: 95%;
         margin: 55px auto 0;
+        @media only screen and (max-width:767px){
+            width: 80%;
+        }
+        @media only screen and (max-width:480px){
+            width: 90%;
+        }
     }
     .hic-grid-container{
         box-shadow: 0px 5px 9px #cfcfcf;
@@ -242,20 +314,52 @@ header{
     @media only screen and(max-width:991px){
         background-position: -230% 100% !important;
     }
+    @media only screen and (max-width:767px){
+        background-position: -170% 100% !important;
+    }
     .incident-section-heading{
         @extend .section-large-title;
         color: $white;
         line-height: 1.1;
         word-spacing: 10px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url(../images/Shape.png);
+            height: 26px;
+            width: 26px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            top: -25px;
+            right: -5px;
+            transform: rotate(180deg);
+            
+        }
+    }
+    .incident-section-information{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url('../images/Shape.png');
+            height: 26px;
+            width: 26px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: -20px;
+            bottom: -5px;
+            @media only screen and (max-width:575px){
+                left: -10px;
+                bottom: 5px;
+            }
+        }
     }
     .incident-section-information,
     .incident-section-date{
-        font-size: 35px;
-        font-family: 'Bebas Neue', cursive;
-        font-weight: 400;
-        color: $white;
-        letter-spacing: 3px;
-        position: relative;
+        @extend .cross-section
     }
     .incident-section-date{
         &::after{
@@ -286,11 +390,14 @@ header{
 // incident-section end
 // odio-section start
 .odio-section{
-    padding: 133px 0 180px;
+    padding: 80px 0 285px;
     background-position: 0 100%;
     background-size: cover;
     background-repeat: no-repeat;
     // background-position-y:center;
+    @media only screen and (max-width:1199px){
+        padding: 80px 0 200px;
+    }
     @media only screen and (max-width:991px){
         background-position: 50% 100%;
     }
@@ -302,6 +409,37 @@ header{
         line-height: 1.2;
         color: #030303;
         word-spacing: 100vw;
+        position: relative;
+        
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url('../images/Shape.png');
+            height: 26px;
+            width: 26px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: -20px;
+            bottom: -5px;
+            @media only screen and (max-width:575px){
+                left: -10px;
+                bottom: 5px;
+            }
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            background-image: url('../images/Shape.png');
+            height: 26px;
+            width: 26px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: 100px;
+            top: -10px;
+            transform: rotate(180deg);
+        }
     }
     .odio-section-subheading{
         @extend .section-medium-title;
@@ -316,6 +454,29 @@ header{
         line-height: 1.7;
         margin-bottom: 24px;
     }
+    .justify-content-sm-end{
+        .cross{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top:30% !important;
+            display: flex;
+            flex-direction: column;
+            right: -25px;
+            @media only screen and (max-width:575px){
+                display: none;
+            }
+            &::before{
+                content: 'X';
+                font-size: 10px !important;
+                margin-bottom: 3px;
+            }
+            &::after{
+                content: 'X';
+                font-size: 10px !important;
+                margin-top: 3px;
+            }
+        }
+    }
     .odio-small-info{
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
@@ -326,6 +487,23 @@ header{
         margin-top: 24px;
     }
     .date-time{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url(../images/Shape.png);
+            height: 26px;
+            width: 26px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: -20px;
+            bottom: -5px;
+            @media only screen and (max-width:575px){
+                left: -10px;
+                bottom: 15px;
+            }
+        }
         .date,.time{
             font-family: 'Bebas Neue', cursive;
             font-weight: 400;
@@ -391,19 +569,29 @@ header{
             line-height: 1.1;
             word-spacing: 10px;
             text-align: right;
+            position: relative;
+            
         }
 
     }
     .exercitation-section-information,
     .exercitation-section-date{
-        font-size: 35px;
-        font-family: 'Bebas Neue', cursive;
-        font-weight: 400;
-        color: $white;
-        letter-spacing: 3px;
-        position: relative;
+        @extend .cross-section;
     }
     .exercitation-section-information{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url(../images/Shape.png);
+            height: 26px;
+            width: 26px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: -20px;
+            bottom: -5px;
+        }
         @media only screen and (max-width:991px){
             text-align: right;
         }
@@ -414,6 +602,26 @@ header{
 .dolors-sections{
     padding: 100px 0;
     background-color: #fbfbf5;
+    .cross{
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top:75%;
+        display: flex;
+        flex-direction: column;
+        right: -15px;
+        &::before{
+            content: 'X';
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        &::after{
+            content: 'X';
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    }
     .dolors-sections-heading{
         @extend .medium-heading;
         font-family: 'Bebas Neue', cursive;
@@ -432,6 +640,28 @@ header{
             bottom: -15px;
             left: 0;
         }
+        .cross{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top:50% !important;
+            display: flex;
+            flex-direction: column;
+            left: -25px !important;
+            right: unset;
+            &::before{
+                content: 'X';
+                font-size: 32px !important;
+                margin-bottom: 10px;
+            }
+            &::after{
+                content: 'X';
+                font-size: 32px !important;
+                margin-top: 10px;
+            }
+        }
+    }
+    .row{
+        
     }
     .dolors-sections-grid{
         padding: 0 30px;
@@ -484,11 +714,14 @@ header{
 // dolors section end
 // amet section start
 .amet-section{
-    padding: 133px 0 180px;
-    background-position: 0 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    padding: 0 0 300px;
+    background-position: 0 90%;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
     // background-position-y:center;
+    @media only screen and (max-width:1199px){
+        padding: 0 0 200px;
+    }
     .amet-section-heading{
         @extend .medium-heading;
         font-family: 'Bebas Neue', cursive;
@@ -497,6 +730,41 @@ header{
         line-height: 1.2;
         color: #030303;
         word-spacing: 100vw;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url(../images/Shape.png);
+            height: 26px;
+            width: 26px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: -20px;
+            bottom: -5px;
+            @media only screen and (max-width:575px){
+                left: -10px;
+                bottom: 5px;
+            }
+        }
+        .cross{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top:50%;
+            display: flex;
+            flex-direction: column;
+            right: 0;
+            &::before{
+                content: 'X';
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+            &::after{
+                content: 'X';
+                font-size: 12px;
+                margin-top: 10px;
+            }
+        }
     }
     .amet-section-subheading{
         @extend .section-medium-title;
@@ -560,6 +828,19 @@ header{
         letter-spacing: 4px;
         color: #050505;
         white-space: pre-line;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url(../images/Shape.png);
+            height: 26px;
+            width: 26px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: -20px;
+            bottom: -5px;
+        }
     }
     .custom-grid-container{
         max-width: 85%;
@@ -573,6 +854,9 @@ header{
                 padding: 0;
             }
             .corporis-img-wrapper{
+                @media only screen and (max-width:767px){
+                    text-align: center;
+                }
                 img{
                     height: 260px;
                     width: 260px;
@@ -673,6 +957,9 @@ header{
             bottom: -15px;
             left: 0;
         }
+        @media only screen and (max-width:375px){
+            font-size: 38px;
+        }
     }
     .vero-date{
         font-family: 'Bebas Neue', cursive;
@@ -742,6 +1029,12 @@ header{
         letter-spacing: 3px;
         word-spacing: 3px;
         padding: 0 70px 50px;
+        @media only screen and (max-width:639px){
+            padding: 0 0 50px;
+        }
+        @media only screen and (max-width:380px){
+            font-size: 30px;
+        }
     }
     .img-container{
         margin-bottom: 35px;

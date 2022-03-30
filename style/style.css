@@ -9,14 +9,45 @@ body {
   font-size: 74px;
 }
 
+@media only screen and (max-width: 575px) {
+  .cross {
+    display: none !important;
+  }
+}
+
 .medium-heading, .banner-section .banner-heading, .odio-section .odio-section-heading, .dolors-sections .dolors-sections-heading, .amet-section .amet-section-heading, .corporis-section .corporis-section-heading {
   font-size: 55px;
+}
+
+@media only screen and (max-width: 375px) {
+  .medium-heading, .banner-section .banner-heading, .odio-section .odio-section-heading, .dolors-sections .dolors-sections-heading, .amet-section .amet-section-heading, .corporis-section .corporis-section-heading {
+    font-size: 44px;
+  }
 }
 
 .divider {
   background: #5f6551;
   height: 2px;
   width: 100%;
+}
+
+.cross-section, .incident-section .incident-section-information,
+.incident-section .incident-section-date, .exercitation-section .exercitation-section-information,
+.exercitation-section .exercitation-section-date {
+  font-size: 35px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+@media only screen and (max-width: 380px) {
+  .cross-section, .incident-section .incident-section-information,
+  .incident-section .incident-section-date, .exercitation-section .exercitation-section-information,
+  .exercitation-section .exercitation-section-date {
+    font-size: 30px;
+  }
 }
 
 .section-medium-title, .banner-section .banner-subheading, .saepe-section .hic-grid-container .hic-grid-heading, .saepe-section .hic-grid-container .info .author, .saepe-section .hic-grid-container .info .date, .odio-section .odio-section-subheading, .dolors-sections .dolors-grid-heading, .amet-section .amet-section-subheading, .corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-grid-content .inner-container .corporis-grid-heading {
@@ -33,6 +64,18 @@ body {
   letter-spacing: 3px;
   line-height: 1.2;
   font-size: 70px;
+}
+
+@media only screen and (max-width: 480px) {
+  .section-large-title, .incident-section .incident-section-heading, .exercitation-section .exercitation-section-right-grid .exercitation-section-heading {
+    font-size: 56px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .section-large-title, .incident-section .incident-section-heading, .exercitation-section .exercitation-section-right-grid .exercitation-section-heading {
+    font-size: 42px;
+  }
 }
 
 .see-more {
@@ -59,6 +102,17 @@ header .logo {
   header .logo {
     max-width: 200px;
     margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  header .navbar-collapse {
+    background: white;
+    padding: 10px;
+    z-index: 1;
+  }
+  header .navbar-collapse .nav-link {
+    display: inline-block;
   }
 }
 
@@ -118,6 +172,18 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .banner-section .banner-text-container {
+    max-width: 68%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .banner-section .banner-text-container {
+    max-width: 80%;
+  }
+}
+
 .banner-section .banner-heading {
   font-family: 'Bebas Neue', cursive;
   font-weight: 400;
@@ -128,6 +194,20 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
 .banner-section .banner-subheading {
   color: #040404;
   margin-bottom: 0;
+  position: relative;
+}
+
+.banner-section .banner-subheading::before {
+  position: absolute;
+  content: '';
+  background-image: url("../images/Shape.png");
+  height: 26px;
+  width: 26px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: -12px;
+  bottom: -5px;
 }
 
 .saepe-section {
@@ -163,9 +243,41 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .saepe-section .saepe-section-heading {
+    max-width: 73%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .saepe-section .saepe-section-heading {
+    max-width: 80%;
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .saepe-section .saepe-section-heading {
+    max-width: 100%;
+    font-size: 36px;
+  }
+}
+
 .saepe-section .custom-container {
   width: 95%;
   margin: 55px auto 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .saepe-section .custom-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .saepe-section .custom-container {
+    width: 90%;
+  }
 }
 
 .saepe-section .hic-grid-container {
@@ -282,20 +394,56 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .incident-section {
+    background-position: -170% 100% !important;
+  }
+}
+
 .incident-section .incident-section-heading {
   color: #fff;
   line-height: 1.1;
   word-spacing: 10px;
+  position: relative;
 }
 
-.incident-section .incident-section-information,
-.incident-section .incident-section-date {
-  font-size: 35px;
-  font-family: 'Bebas Neue', cursive;
-  font-weight: 400;
-  color: #fff;
-  letter-spacing: 3px;
+.incident-section .incident-section-heading::before {
+  position: absolute;
+  content: '';
+  background-image: url(../images/Shape.png);
+  height: 26px;
+  width: 26px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: -25px;
+  right: -5px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.incident-section .incident-section-information {
   position: relative;
+}
+
+.incident-section .incident-section-information::before {
+  position: absolute;
+  content: '';
+  background-image: url("../images/Shape.png");
+  height: 26px;
+  width: 26px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: -20px;
+  bottom: -5px;
+}
+
+@media only screen and (max-width: 575px) {
+  .incident-section .incident-section-information::before {
+    left: -10px;
+    bottom: 5px;
+  }
 }
 
 .incident-section .incident-section-date::after {
@@ -334,10 +482,16 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
 }
 
 .odio-section {
-  padding: 133px 0 180px;
+  padding: 80px 0 285px;
   background-position: 0 100%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1199px) {
+  .odio-section {
+    padding: 80px 0 200px;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -353,6 +507,42 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   line-height: 1.2;
   color: #030303;
   word-spacing: 100vw;
+  position: relative;
+}
+
+.odio-section .odio-section-heading::before {
+  position: absolute;
+  content: '';
+  background-image: url("../images/Shape.png");
+  height: 26px;
+  width: 26px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: -20px;
+  bottom: -5px;
+}
+
+@media only screen and (max-width: 575px) {
+  .odio-section .odio-section-heading::before {
+    left: -10px;
+    bottom: 5px;
+  }
+}
+
+.odio-section .odio-section-heading::after {
+  position: absolute;
+  content: '';
+  background-image: url("../images/Shape.png");
+  height: 26px;
+  width: 26px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: 100px;
+  top: -10px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .odio-section .odio-section-information {
@@ -366,6 +556,39 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   margin-bottom: 24px;
 }
 
+.odio-section .justify-content-sm-end .cross {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 30% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: -25px;
+}
+
+@media only screen and (max-width: 575px) {
+  .odio-section .justify-content-sm-end .cross {
+    display: none;
+  }
+}
+
+.odio-section .justify-content-sm-end .cross::before {
+  content: 'X';
+  font-size: 10px !important;
+  margin-bottom: 3px;
+}
+
+.odio-section .justify-content-sm-end .cross::after {
+  content: 'X';
+  font-size: 10px !important;
+  margin-top: 3px;
+}
+
 .odio-section .odio-small-info {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -374,6 +597,30 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   font-size: 20px;
   word-spacing: 3px;
   margin-top: 24px;
+}
+
+.odio-section .date-time {
+  position: relative;
+}
+
+.odio-section .date-time::before {
+  position: absolute;
+  content: '';
+  background-image: url(../images/Shape.png);
+  height: 26px;
+  width: 26px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: -20px;
+  bottom: -5px;
+}
+
+@media only screen and (max-width: 575px) {
+  .odio-section .date-time::before {
+    left: -10px;
+    bottom: 15px;
+  }
 }
 
 .odio-section .date-time .date, .odio-section .date-time .time {
@@ -457,16 +704,24 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   line-height: 1.1;
   word-spacing: 10px;
   text-align: right;
+  position: relative;
 }
 
-.exercitation-section .exercitation-section-information,
-.exercitation-section .exercitation-section-date {
-  font-size: 35px;
-  font-family: 'Bebas Neue', cursive;
-  font-weight: 400;
-  color: #fff;
-  letter-spacing: 3px;
+.exercitation-section .exercitation-section-information {
   position: relative;
+}
+
+.exercitation-section .exercitation-section-information::before {
+  position: absolute;
+  content: '';
+  background-image: url(../images/Shape.png);
+  height: 26px;
+  width: 26px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: -20px;
+  bottom: -5px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -478,6 +733,35 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
 .dolors-sections {
   padding: 100px 0;
   background-color: #fbfbf5;
+}
+
+.dolors-sections .cross {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: -15px;
+}
+
+.dolors-sections .cross::before {
+  content: 'X';
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dolors-sections .cross::after {
+  content: 'X';
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .dolors-sections .dolors-sections-heading {
@@ -498,6 +782,34 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   background-color: #070707;
   bottom: -15px;
   left: 0;
+}
+
+.dolors-sections .dolors-sections-heading .cross {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: -25px !important;
+  right: unset;
+}
+
+.dolors-sections .dolors-sections-heading .cross::before {
+  content: 'X';
+  font-size: 32px !important;
+  margin-bottom: 10px;
+}
+
+.dolors-sections .dolors-sections-heading .cross::after {
+  content: 'X';
+  font-size: 32px !important;
+  margin-top: 10px;
 }
 
 .dolors-sections .dolors-sections-grid {
@@ -557,10 +869,16 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
 }
 
 .amet-section {
-  padding: 133px 0 180px;
-  background-position: 0 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding: 0 0 300px;
+  background-position: 0 90%;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+@media only screen and (max-width: 1199px) {
+  .amet-section {
+    padding: 0 0 200px;
+  }
 }
 
 .amet-section .amet-section-heading {
@@ -570,6 +888,54 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   line-height: 1.2;
   color: #030303;
   word-spacing: 100vw;
+  position: relative;
+}
+
+.amet-section .amet-section-heading::before {
+  position: absolute;
+  content: '';
+  background-image: url(../images/Shape.png);
+  height: 26px;
+  width: 26px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: -20px;
+  bottom: -5px;
+}
+
+@media only screen and (max-width: 575px) {
+  .amet-section .amet-section-heading::before {
+    left: -10px;
+    bottom: 5px;
+  }
+}
+
+.amet-section .amet-section-heading .cross {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0;
+}
+
+.amet-section .amet-section-heading .cross::before {
+  content: 'X';
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.amet-section .amet-section-heading .cross::after {
+  content: 'X';
+  font-size: 12px;
+  margin-top: 10px;
 }
 
 .amet-section .amet-section-information {
@@ -634,6 +1000,20 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   letter-spacing: 4px;
   color: #050505;
   white-space: pre-line;
+  position: relative;
+}
+
+.corporis-section .corporis-section-heading::before {
+  position: absolute;
+  content: '';
+  background-image: url(../images/Shape.png);
+  height: 26px;
+  width: 26px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: -20px;
+  bottom: -5px;
 }
 
 .corporis-section .custom-grid-container {
@@ -654,6 +1034,12 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
 @media only screen and (max-width: 991px) {
   .corporis-section .custom-grid-container .corporis-grid-wrapper {
     padding: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .corporis-section .custom-grid-container .corporis-grid-wrapper .corporis-img-wrapper {
+    text-align: center;
   }
 }
 
@@ -771,6 +1157,12 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   left: 0;
 }
 
+@media only screen and (max-width: 375px) {
+  .vero-section .vero-section-heading {
+    font-size: 38px;
+  }
+}
+
 .vero-section .vero-date {
   font-family: 'Bebas Neue', cursive;
   font-weight: 400;
@@ -857,6 +1249,18 @@ header form button.btn-search:focus + .btn, header form button.btn-search:focus 
   letter-spacing: 3px;
   word-spacing: 3px;
   padding: 0 70px 50px;
+}
+
+@media only screen and (max-width: 639px) {
+  .alique-section .alique-section-text {
+    padding: 0 0 50px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .alique-section .alique-section-text {
+    font-size: 30px;
+  }
 }
 
 .alique-section .img-container {
